@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Expense Tracker</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Application Header -->
+        <header>
+            <h1>My Expense Tracker</h1>
+            <p>Track your spending and manage your money.</p>
+        </header>
+
+        <!-- Total Expense Summary -->
+        <section class="summary">
+            <h2>Total Amount Spent</h2>
+            <p id="totalAmount">$0.00</p>
+
+            <p class="expense-count">
+                Total Expenses: <span id="expenseCount">0</span>
+            </p>
+        </section>
+
+        <!-- Add Expense Form -->
+        <section class="expense-form">
+
+            <h2>Add New Expense</h2>
+
+            <form id="expenseForm">
+
+                <div class="form-group">
+                    <label for="expenseName">
+                        Expense Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="expenseName"
+                        placeholder="Example: Grocery Shopping"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseAmount">
+                        Amount (USD)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="expenseAmount"
+                        placeholder="Example: 200"
+                        min="0.01"
+                        step="0.01"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseCategory">
+                        Category
+                    </label>
+
+                    <select id="expenseCategory">
+                        <option value="Food">Food</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Entertainment">
+                            Entertainment
+                        </option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="addButton">
+                    Add Expense
+                </button>
+
+                <!-- Error messages appear here -->
+                <p id="errorMessage" role="alert"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Expense List -->
+        <section class="expense-list">
+
+            <h2>Expense History</h2>
+
+            <div id="expenseList">
+
+                <p class="empty-message">
+                    No expenses added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

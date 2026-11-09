@@ -1,0 +1,218 @@
+
+/* General page styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Main application container */
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+/* Total expense summary */
+
+.summary {
+    background-color: #2563eb;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.summary h2 {
+    font-size: 18px;
+}
+
+#totalAmount {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.expense-count {
+    font-size: 14px;
+}
+
+/* Expense form */
+
+.expense-form {
+    margin-bottom: 30px;
+}
+
+.expense-form h2,
+.expense-list h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Add expense button */
+
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Error message */
+
+#errorMessage {
+    color: #dc2626;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* Expense history */
+
+.expense-list {
+    margin-top: 25px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.expense-details h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.expense-details p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.expense-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Delete button */
+
+.delete-button {
+    width: auto;
+    padding: 8px 12px;
+    background-color: #dc2626;
+    font-size: 13px;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Empty expense message */
+
+.empty-message {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 10px auto;
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .expense-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .expense-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #totalAmount {
+        font-size: 28px;
+    }
+}
